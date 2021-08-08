@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="sampleform.css">
+</head>
+
+<body>
+    <body style="background-color: burlywood; text-align: center;">
+        <h1 style="color: green;">
+            Form 
+        </h1>
+    
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <h3>Fill the details</h3>
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <input type="text" name="Address" id="Address">
+                    </div>
+                    <div>
+                        <label>country</label>
+                        <input type="text" name="country" id="country">
+                    </div>
+                    <div>
+                        <label>pincode</label>
+                        <input type="text" name="pincode" id="pincode">
+                    </div>
+                    <div>
+                        <label>Menu:</label><br>
+                        <select multiple id="My_Select_Menu">
+                            <option value="noodles" selected="selected">noodles</option>
+                            <option value="pizza" selected="selected">pizza</option>
+                            <option value="pasta" selected="selected">pasta</option>
+                            <option value="burger" selected="selected">burger</option>
+                            
+                        </select><br>
+                        <br>
+                    </div>
+                    
+                    <div>
+                        <label>Gender:</label>
+                        <select id="My_Menu">
+                            <option value="MALE" selected="selected">Male</option>
+                            <option value="FEMALE" selected="selected">Female</option>
+                            
+                            
+                        </select>
+
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <h3 style="color: black;"> TEMPORARY DATA</h3>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>country</th>
+                            <th>pincode</th>
+                            <th>Menu</th>
+                            <th>Gender</th>
+                          
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="sampleform.js"></script>
+</body>
+
+</html>
